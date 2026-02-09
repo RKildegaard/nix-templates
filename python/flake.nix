@@ -10,25 +10,27 @@
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = import nixpkgs { inherit system; };
-        python = python315;
+        python = pkgs.python312;
+        pythonEnv = python.withPackages (ps: with ps; [
+          ipykernel
+          jupyter
+          notebook
+          jupyterlab
+          jupyterlab-lsp
+          jedi-language-server
+        ]);
       in
       {
         formatter = pkgs.alejandra;
 
         devShells.default = pkgs.mkShell {
-          packages = with pkgs; 
-          [
-            python
-            uv
-            ruff
-            pyright
-            pre-commit
-            git
-            ipykernel
-            jupyter
-            notebook
-            jupyterlab-lsp
-            jedi-language-server
+          packages = [
+            pythonEnv
+            pkgs.uv
+            pkgs.ruff
+            pkgs.pyright
+            pkgs.pre-commit
+            pkgs.git
           ];
         };
       }
