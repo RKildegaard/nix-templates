@@ -3,9 +3,13 @@
 
   outputs = _: {
     templates = {
-      python = {
-        path = ./python/python;
+      python-315 = {
+        path = ./python/python315;
         description = "Python 3.15 template";
+      };
+      python-312 = {
+        path = ./python/python312;
+        description = "Python 3.12 template";
       };
       java-gradle = {
         path = ./java/gradle;
