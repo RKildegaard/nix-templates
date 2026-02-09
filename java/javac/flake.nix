@@ -1,5 +1,5 @@
 {
-  description = "Java devshell template";
+  description = "Java (javac) devshell template";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -19,23 +19,19 @@
           packages = [
             jdk
 
-            # Build tools (pick one, or keep both):
-            pkgs.gradle
-            pkgs.maven
-
-            # Developer tooling
             pkgs.jdt-language-server
             pkgs.google-java-format
             pkgs.checkstyle
             pkgs.git
             pkgs.pre-commit
+            pkgs.gnumake
           ];
 
           JAVA_HOME = "${jdk}";
 
           shellHook = ''
-            echo "Entered Java devshell ($(${jdk}/bin/java -version 2>&1 | head -n1))"
-            echo "JAVA_HOME=$JAVA_HOME"
+            echo "Entered Java (javac) devshell ($(${jdk}/bin/java -version 2>&1 | head -n1))"
+            echo "Tip: run 'make run' or 'make test'"
           '';
         };
       }

@@ -12,9 +12,5 @@ out/
 .classpath
 .settings/
 
-
-# Maven
-target/
-
 # Logs
 *.log

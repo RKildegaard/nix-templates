@@ -2,6 +2,7 @@
 
 # Compiled
 *.class
+out/
 
 # IDEs
 .idea/
@@ -10,10 +11,6 @@
 .project
 .classpath
 .settings/
-out/
-
-# Maven
-target/
 
 # Gradle
 .gradle/
