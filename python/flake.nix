@@ -10,7 +10,7 @@
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = import nixpkgs { inherit system; };
-        python = pkgs.python312;
+        python = pkgs.python315;
         pythonEnv = python.withPackages (ps: with ps; [
           ipykernel
           jupyter

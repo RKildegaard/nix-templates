@@ -5,19 +5,19 @@
     templates = {
       python = {
         path = ./python;
-        description = "Python template";
+        description = "Python 3.15 template";
       };
       java-gradle = {
         path = ./java/gradle;
-        description = "Java (Gradle) template";
+        description = "Gradle jdk25 template";
       };
       java-maven = {
         path = ./java/maven;
-        description = "Java (Maven) template";
+        description = "Maven jdk25 template";
       };
       java-javac = {
         path = ./java/javac;
-        description = "Java (javac) template";
+        description = "Javac jdk25 template";
       };
     };
   };
