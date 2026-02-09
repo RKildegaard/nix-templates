@@ -10,7 +10,7 @@
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = import nixpkgs { inherit system; };
-        jdk = pkgs.jdk21;
+        jdk = pkgs.jdk25;
       in
       {
         formatter = pkgs.alejandra;
@@ -28,11 +28,6 @@
           ];
 
           JAVA_HOME = "${jdk}";
-
-          shellHook = ''
-            echo "Entered Java (Gradle) devshell ($(${jdk}/bin/java -version 2>&1 | head -n1))"
-            echo "Tip: run 'gradle test'"
-          '';
         };
       }
     );
