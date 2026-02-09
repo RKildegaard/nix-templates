@@ -4,7 +4,7 @@
   outputs = _: {
     templates = {
       python = {
-        path = ./python;
+        path = ./python/python;
         description = "Python 3.15 template";
       };
       java-gradle = {
