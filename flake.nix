@@ -1,6 +1,10 @@
 {
   description = "A collection of flake templates";
 
+  # HOW TO USE:
+  # The outputs are defined in categories. To template the categories use "-" seperated names.
+  # This way in python-315 the python is the category and the 315 is the template name.
+
   outputs = _: {
     templates = {
       python-315 = {
