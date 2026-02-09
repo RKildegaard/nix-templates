@@ -11,6 +11,8 @@
       let
         pkgs = import nixpkgs { inherit system; };
         go = pkgs.go;
+
+        opt = attr: pkgs.lib.optionals (builtins.hasAttr attr pkgs) [ (builtins.getAttr attr pkgs) ];
       in
       {
         formatter = pkgs.alejandra;
@@ -30,8 +32,19 @@
 
               pkgs.git
               pkgs.pre-commit
-              pkgs.gotestsum
-            ];
+            ]
+            ++ opt "gotestsum"
+            ++ opt "staticcheck";
+
+          shellHook = ''
+            echo "Entered Go devshell ($(${go}/bin/go version))"
+            if [ ! -f go.mod ]; then
+              echo "Tip: run 'go mod init <module>'"
+            else
+              echo "Tip: run 'go test ./...'"
+              echo "Tip: run 'go run ./cmd/hello'"
+            fi
+          '';
         };
       }
     );

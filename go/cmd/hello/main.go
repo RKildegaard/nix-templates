@@ -2,8 +2,7 @@ package main
 
 import (
 	"fmt"
-
-	"example.com/go-template/internal/hello"
+	"go-template/internal/hello"
 )
 
 func main() {
