@@ -31,7 +31,7 @@
               pkgs.git
               pkgs.pre-commit
               pkgs.gotestsum
-            ]
+            ];
         };
       }
     );
