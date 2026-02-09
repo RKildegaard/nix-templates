@@ -3,15 +3,9 @@
 Includes a Nix devshell with:
 
 - `gopls` + `dlv`
-- `golangci-lint`, `staticcheck`, `gofumpt`, `gotestsum`
+- `golangci-lint`, `gofumpt`, `gotestsum`
 
 ## Use
-
-If you use `direnv`:
-
-```bash
-direnv allow
-```
 
 ## Try the example
 
