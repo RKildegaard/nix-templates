@@ -1,0 +1,19 @@
+.direnv/
+
+# Compiled
+*.class
+out/
+
+# IDEs
+.idea/
+*.iml
+.vscode/
+.project
+.classpath
+.settings/
+
+# Maven
+target/
+
+# Logs
+*.log
