@@ -11,9 +11,8 @@
       let
         pkgs = import nixpkgs { inherit system; };
 
-        go =
-          if pkgs ? go_1_23 then pkgs.go_1_23
-          else pkgs.go;
+        # Use the default Go toolchain from nixpkgs (kept current/supported).
+        go = pkgs.go;
       in
       {
         formatter = pkgs.alejandra;
@@ -35,9 +34,6 @@
             pkgs.git
             pkgs.pre-commit
           ];
-
-          # Keep Go module mode on and avoid surprises.
-          GO111MODULE = "on";
 
           shellHook = ''
             echo "Entered Go devshell ($(${go}/bin/go version))"
