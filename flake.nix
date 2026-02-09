@@ -3,23 +3,23 @@
 
   outputs = _: {
     templates = {
-      python-315 = {
+      python_3_15 = {
         path = ./python/python315;
         description = "Python 3.15 template";
       };
-      python-312 = {
+      python_3_12 = {
         path = ./python/python312;
         description = "Python 3.12 template";
       };
-      java-gradle = {
+      java_gradle = {
         path = ./java/gradle;
         description = "Gradle jdk25 template";
       };
-      java-maven = {
+      java_maven = {
         path = ./java/maven;
         description = "Maven jdk25 template";
       };
-      java-javac = {
+      java_javac = {
         path = ./java/javac;
         description = "Javac jdk25 template";
       };
