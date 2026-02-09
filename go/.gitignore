@@ -1,0 +1,14 @@
+.direnv/
+
+# Binaries
+bin/
+
+# Go build cache (if you choose to keep it local)
+# .cache/
+
+# Editor
+.vscode/
+.idea/
+
+# OS
+.DS_Store

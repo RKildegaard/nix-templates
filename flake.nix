@@ -27,6 +27,14 @@
         path = ./java/javac;
         description = "Javac jdk25 template";
       };
+      go = {
+        path = ./go;
+        description = "Go devshell template";
+      };
+      chisel = {
+        path = ./chisel;
+        description = "Chisel template";
+      };
     };
   };
 }
